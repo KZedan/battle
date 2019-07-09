@@ -11,3 +11,11 @@ feature 'check points' do
     expect(page).to have_content "Mittens: 60HP"
   end
 end
+
+  feature 'attacks a player' do
+    scenario 'it attacks a player' do
+      sign_in_and_play
+      click_link 'Attack'
+      expect(page).to have_content "Dave attacked Mittens"
+    end
+  end
