@@ -23,8 +23,7 @@ end
 feature 'deducts points' do
   scenario 'reduces players HP' do
     sign_in_and_play
-    click_button 'Attack'
-    click_link 'OK'
+    click_link 'Attack'
     expect(page).to have_content "Mittens: 50HP"
     expect(page).not_to have_content "Mittens: 60HP"
   end
